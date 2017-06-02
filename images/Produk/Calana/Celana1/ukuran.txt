@@ -1,0 +1,4 @@
+slide : 500 px 500 px
+produk : 420 px 313 px
+INDEX : 212 px
+produk kecil : 55 x 41p x
