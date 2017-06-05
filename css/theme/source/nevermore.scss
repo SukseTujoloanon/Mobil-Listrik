@@ -1,0 +1,108 @@
+/**
+ * Custom dark theme for reveal.js
+ * 
+ * Copyright (c) 2013 Alex Xandra Albert Sim, http://bertzzie.com
+ */
+
+// Default mixins and settings -------
+@import "../template/mixins";
+@import "../template/settings";
+// -----------------------------------
+
+// Fonts -----------------------------
+@import url(http://fonts.googleapis.com/css?family=Patrick+Hand|Roboto:400,900,700|Merriweather+Sans:400,700,800);
+// -----------------------------------
+
+$backgroundColor: #191e2d; // also top gradient
+$bottomGradient: #000014;
+$background: vertical-gradient($backgroundColor, $bottomGradient);
+
+// Primary / body text
+$mainFont: 'Roboto', sans-serif;
+$mainFontSize: 32px;
+$mainColor: #FFF;
+
+// Headings
+$headingFont: 'Merriweather Sans', sans-serif;
+$haedingLetterSpacing: normal;
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-weight: 700;
+}
+
+// Links and actions
+$linkColor: #557dff;
+$linkColorHover: lighten($linkColor, 15%);
+
+// quotes
+.reveal q,
+.reveal blockquote {
+    font-family: 'Patrick Hand', serif;
+    font-weight: 400;
+    padding: .75em;
+    text-align: left;
+}
+
+.reveal cite {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-style: initial;
+
+    margin-right: 5em;
+    margin-top: 1em;
+    text-align: right;
+}
+
+// images
+.reveal .transparant {
+    border: 0;
+    background: none;
+}
+
+// tables
+.reveal table {
+    border-collapse: collapse;
+
+    td, th {
+        border-spacing: 0;
+        padding: .5em;
+    }
+
+    thead {
+        th {
+            background-color: #555;
+            border-bottom: 5px solid #CCC;
+            border-top: 5px solid #CCC;
+            text-align: center;
+        }
+    }
+
+    tbody {
+        border-bottom: 5px solid #CCC;
+        td {
+            border-bottom: 1px solid #CCC;
+        }
+
+        tr:nth-child(even) {
+            background-color: #222;
+        }
+
+        .engine {
+            text-align: center;
+        }
+    }
+}
+
+@mixin bodyBackground() {
+    background: $background;
+}
+
+// Theme Template --------------------
+@import "../template/theme";
+// -----------------------------------
